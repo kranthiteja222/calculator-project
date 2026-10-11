@@ -3,6 +3,7 @@ const num1Input = document.getElementById("num1");
 const num2Input = document.getElementById("num2");
 const addButton = document.getElementById("addButton");
 const result = document.getElementById("result");
+const multiplyButton = document.getElementById("multiplyButton");
 
 addButton.addEventListener("click", function () {
     const firstValue = num1Input.value.trim();
@@ -26,11 +27,9 @@ addButton.addEventListener("click", function () {
 });
 
 
-const multiplyButton = document.getElementById("multiplyButton");
-
 multiplyButton.addEventListener("click", function () {
-    const input1 = document.getElementById("number1").value;
-    const input2 = document.getElementById("number2").value;
+const input1 = document.getElementById("num1").value;
+const input2 = document.getElementById("num2").value;
 
     if (input1.trim() === "" || input2.trim() === "") {
         document.getElementById("result").textContent =
