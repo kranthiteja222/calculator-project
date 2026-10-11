@@ -1,0 +1,10 @@
+
+stages:
+  - test
+
+check_calculator:
+  stage: test
+  image: node:22-alpine
+  script:
+    - node --check script.js
+    - echo "Calculator JavaScript syntax check passed!"
