@@ -24,3 +24,30 @@ addButton.addEventListener("click", function () {
     const sum = num1 + num2;
     result.textContent = String(sum);
 });
+
+
+const multiplyButton = document.getElementById("multiplyButton");
+
+multiplyButton.addEventListener("click", function () {
+    const input1 = document.getElementById("number1").value;
+    const input2 = document.getElementById("number2").value;
+
+    if (input1.trim() === "" || input2.trim() === "") {
+        document.getElementById("result").textContent =
+            "Please enter both numbers.";
+        return;
+    }
+
+    const num1 = Number(input1);
+    const num2 = Number(input2);
+
+    if (!Number.isFinite(num1) || !Number.isFinite(num2)) {
+        document.getElementById("result").textContent =
+            "Please enter valid numbers.";
+        return;
+    }
+
+    document.getElementById("result").textContent =
+        "Result: " + (num1 * num2);
+});
+
