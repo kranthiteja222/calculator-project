@@ -7,8 +7,5 @@ check_calculator:
   image: node:22-alpine
   script:
     - node --check script.js
+    - node calculator.test.js
     - echo "Calculator JavaScript syntax check passed!"
-
-script:
-  - node --check script.js
-  - node calculator.test.js
