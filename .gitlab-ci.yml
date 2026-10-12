@@ -8,3 +8,7 @@ check_calculator:
   script:
     - node --check script.js
     - echo "Calculator JavaScript syntax check passed!"
+
+script:
+  - node --check script.js
+  - node calculator.test.js
